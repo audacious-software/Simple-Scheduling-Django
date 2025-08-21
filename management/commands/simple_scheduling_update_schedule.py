@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import importlib
-import json
-import traceback
 
 from django.conf import settings
 from django.core.management.base import BaseCommand
