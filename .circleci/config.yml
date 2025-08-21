@@ -53,7 +53,8 @@ jobs:
             mv ../simple_scheduling ss
             cd ss
             git clone https://github.com/audacious-software/Quicksilver-Django.git quicksilver
-            cp simple_scheeduling/.circleci/circle_settings.py ss/settings.py
+            pip install -r simple_scheduling/requirements.txt -r quicksilver/requirements.txt
+            cp simple_scheduling/.circleci/circle_settings.py ss/settings.py
             python manage.py migrate
             python manage.py install_quicksilver_tasks
             python manage.py test
@@ -108,8 +109,9 @@ jobs:
             django-admin startproject ss
             mv ../simple_scheduling ss
             cd ss
-            cp simple_scheeduling/.circleci/circle_settings.py ss/settings.py
+            cp simple_scheduling/.circleci/circle_settings.py ss/settings.py
             git clone https://github.com/audacious-software/Quicksilver-Django.git quicksilver
+            pip install -r simple_scheduling/requirements.txt -r quicksilver/requirements.txt
             python manage.py migrate
             python manage.py install_quicksilver_tasks
             python manage.py test
@@ -164,8 +166,9 @@ jobs:
             django-admin startproject ss
             mv ../simple_scheduling ss
             cd ss
-            cp simple_scheeduling/.circleci/circle_settings.py ss/settings.py
+            cp simple_scheduling/.circleci/circle_settings.py ss/settings.py
             git clone https://github.com/audacious-software/Quicksilver-Django.git quicksilver
+            pip install -r simple_scheduling/requirements.txt -r quicksilver/requirements.txt
             python manage.py migrate
             python manage.py install_quicksilver_tasks
             python manage.py test
@@ -220,8 +223,9 @@ jobs:
             django-admin startproject ss
             mv ../simple_scheduling ss
             cd ss
-            cp simple_scheeduling/.circleci/circle_settings.py ss/settings.py
+            cp simple_scheduling/.circleci/circle_settings.py ss/settings.py
             git clone https://github.com/audacious-software/Quicksilver-Django.git quicksilver
+            pip install -r simple_scheduling/requirements.txt -r quicksilver/requirements.txt
             python manage.py migrate
             python manage.py install_quicksilver_tasks
             python manage.py test
@@ -276,8 +280,9 @@ jobs:
             django-admin startproject ss
             mv ../simple_scheduling ss
             cd ss
-            cp simple_scheeduling/.circleci/circle_settings.py ss/settings.py
+            cp simple_scheduling/.circleci/circle_settings.py ss/settings.py
             git clone https://github.com/audacious-software/Quicksilver-Django.git quicksilver
+            pip install -r simple_scheduling/requirements.txt -r quicksilver/requirements.txt
             python manage.py migrate
             python manage.py install_quicksilver_tasks
             python manage.py test
@@ -332,8 +337,9 @@ jobs:
             django-admin startproject ss
             mv ../simple_scheduling ss
             cd ss
-            cp simple_scheeduling/.circleci/circle_settings.py ss/settings.py
+            cp simple_scheduling/.circleci/circle_settings.py ss/settings.py
             git clone https://github.com/audacious-software/Quicksilver-Django.git quicksilver
+            pip install -r simple_scheduling/requirements.txt -r quicksilver/requirements.txt
             python manage.py migrate
             python manage.py install_quicksilver_tasks
             python manage.py test
