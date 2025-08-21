@@ -27,6 +27,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'prettyjson',
     'quicksilver',
     'simple_scheduling'
 )
@@ -42,7 +43,7 @@ MIDDLEWARE = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'sr.urls'
+ROOT_URLCONF = 'ss.urls'
 
 TEMPLATES = [
     {
