@@ -4,8 +4,6 @@ import hashlib
 import json
 import logging
 
-import iso8601
-
 from django.core.serializers.json import DjangoJSONEncoder
 from django.db import models
 from django.utils import timezone
