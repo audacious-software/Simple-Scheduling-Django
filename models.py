@@ -6,6 +6,7 @@ import logging
 
 import iso8601
 
+from django.core.serializers.json import DjangoJSONEncoder
 from django.db import models
 from django.utils import timezone
 
@@ -21,7 +22,7 @@ logger = logging.getLogger(__name__) # pylint: disable=invalid-name
 
 def dict_fingerprint(dict_obj):
     encoder = hashlib.sha256()
-    encoder.update(json.dumps(dict_obj, sort_keys=True).encode('utf-8'))
+    encoder.update(json.dumps(dict_obj, sort_keys=True, cls=DjangoJSONEncoder).encode('utf-8'))
 
     return encoder.hexdigest()
 
@@ -75,7 +76,7 @@ class ScheduledItem(models.Model): # pylint:disable=too-many-instance-attributes
                 if fingerprint != match.fingerprint:
                     match.identifier = event_key
                     match.action = event_action
-                    match.when = iso8601.parse_date(event_time)
+                    match.when = event_time
 
                     match.context = event_dict.get('context', {})
 
